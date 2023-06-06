@@ -7,13 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mi-goods" />
-        <module name="mi-gateway" />
-        <module name="mi-personel" />
-        <module name="mi-security" />
+        <module name="mi-entity" />
         <module name="mi-index" />
-        <module name="mi-order" />
         <module name="mi-api" />
+        <module name="mi-gateway" />
+        <module name="mi-order" />
+        <module name="mi-security" />
+        <module name="mi-personel" />
+        <module name="mi-goods" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +32,7 @@
       <module name="mi-back" options="-parameters" />
       <module name="mi-buy" options="-parameters" />
       <module name="mi-cart" options="-parameters" />
+      <module name="mi-entity" options="-parameters" />
       <module name="mi-gateway" options="-parameters" />
       <module name="mi-goods" options="-parameters" />
       <module name="mi-index" options="-parameters" />

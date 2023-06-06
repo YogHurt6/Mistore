@@ -42,7 +42,7 @@
             <label for="code" class="login_label pwd_label"></label>
             <input type="text" maxlength="4" class="ipt1" name="code" v-model="valcode" @blur="checkInfo(2)" id="code"
                    @focus="clearmsg" placeholder="验证码"/>
-            <img class="code" src="code.action" onclick="this.src='code.action?d=' + new Date()">
+            <img class="code" src="http://localhost:2357/misecurity/code.action" onclick="this.src='http://localhost:2357/misecurity/code.action?d=' + new Date()">
         </div>
 
         <div class="item item2">
@@ -140,7 +140,6 @@
             },
             login: function () {
                 var params = new URLSearchParams();
-                params.append("op", "login");
                 params.append("account", this.account);
                 params.append("pwd", this.pwd);
                 params.append("valcode", this.valcode);
@@ -149,9 +148,8 @@
                     console.info(this.status);
                     return;
                 }
-                axios.post("login.action", qs.stringify({
-                    op: "login",
-                    nickName: this.account,
+                axios.post("http://localhost:2357/misecurity/login.action", qs.stringify({
+                    nickname: this.account,
                     pwd: this.pwd,
                     realName: this.code,
                     valcode: this.valcode

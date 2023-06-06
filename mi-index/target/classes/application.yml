@@ -1,8 +1,10 @@
+
 server:
   port: 8801
 spring:
   application:
     name: mi-index
+    filePath: "E://upload"
   cloud:
     inetutils:
       ignored-interfaces: 'VMware Virtual Ethernet Adapter for VMnet1,VMware Virtual Ethernet Adapter for VMnet8'
@@ -14,7 +16,7 @@ spring:
         namespace: mistore
   web:
     resources:
-      static-locations: [classpath:/public/,classpath:/resources/,classpath:/META-INF/resources/,classpath:/static/]
+      static-locations: [file:e:/upload/,classpath:/public/,classpath:/resources/,classpath:/META-INF/resources/,classpath:/static/]
 logging:
   level:
     root: info

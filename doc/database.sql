@@ -3,7 +3,7 @@ use mistore;
 
 /*1.地址信息*/
 CREATE TABLE `addrinfo` (
-                            `ano` varchar(100) primary key NOT NULL,/*地址编号*/
+                            `ano` int(100) primary key NOT NULL AUTO_INCREMENT,/*地址编号*/
                             `mno` int(11) DEFAULT NULL,/* 用户编号，登录用户 */
                             `name` varchar(100)  NOT NULL,/* 收件人 */
                             `tel` varchar(15)  NOT NULL,/* 电话号码 */
@@ -137,7 +137,7 @@ create table memberinfo(
 /*7.订单信息*/
 CREATE TABLE `orderinfo`
 (
-    `ono`     varchar(100) primary key NOT NULL,/*订单编号*/
+    `ono`     int(100) primary key NOT NULL AUTO_INCREMENT/*订单编号*/
     `odate`   varchar(50)  DEFAULT NULL,/*订单时间*/
     `ano`     varchar(100) DEFAULT NULL,/*地址编号*/
     `sdate`   varchar(50)  DEFAULT NULL,
